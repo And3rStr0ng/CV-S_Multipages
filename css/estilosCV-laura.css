@@ -1,0 +1,267 @@
+/* Reseteo general */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Estilos para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+    color: #333;
+    line-height: 1.6;
+}
+/* Contenedor central */
+.contenedor {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+/* Encabezado */
+header {
+    background-color: #2222e6;
+    text-align: left;
+    padding: 20px;
+    border-bottom: 3px solid #2c3e50;
+    margin-bottom: 25px;
+    border-radius: 6px 6px 0 0;
+    /* Solución limpia para que la foto no se salga del header */
+    display: flow-root; 
+}
+/*contenedor de la foto dentro del header */
+.contenedor-foto {
+    float: right;
+    margin: 0 0 10px 15px;
+}
+/* estilo de la foto de perfil */
+.foto-cv {
+    width: 130px;            /* Tamaño adecuado para el header */
+    height: 130px;           /* Mismo alto para hacerla cuadrada */
+    object-fit: cover;       /* Evita que la foto se deforme */
+    border-radius: 50%;      /* Hace la foto redonda */
+    border: 3px solid #ffffff; /* Borde blanco para resaltar sobre el fondo azul */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+/*para que se contraste al encabezado*/
+header h1 {
+    color: #e2e7eb;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+/*para que se contraste al encabezado*/
+header p {
+    color: #e2e7eb;
+    margin-bottom: 15px;
+}
+/* Navegación */
+nav a {
+    color: #e2e7eb;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+/*para cambiar el color de los enlaces del menu al pasar el mouse*/
+nav a:hover {
+    color: #aed0ee;
+}
+
+/* distribución del contenido principal */
+main {
+    display: flex;
+    gap: 25px;
+}
+/* para en copume cierto espacio y que sea a la izquierda */
+.columna-principal {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Maneja la separación entre secciones de forma limpia */
+}
+/*lo mismo que la principal pero a la derecha*/
+.columna-lateral {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Separación exacta entre Datos Personales y Formulario */
+}
+
+/* es el estilo de cada seccion y tarjetas */
+.tarjeta {
+    background-color: #ffffff;
+    padding: 20px;
+    border-left: 4px solid #2222e6;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+/*los titulos de cada seccion*/
+h2 {
+    color: #2222e6;
+    border-bottom: 2px solid #2222e6;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+/*para las viñetas*/
+ul {
+    padding-left: 20px;
+}
+/*separa un elemento del siguiente*/
+li {
+    margin-bottom: 8px;
+}
+
+/* Cambia a un fondo oscuro transparente al pasar el mouse por los enlaces normales */
+header .nav-pills .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.25); /* Fondo oscuro transparente */
+    color: #ffffff;                         /* Mantiene el texto blanco */
+}
+
+/*para resaltar el texto a mi gusto*/
+mark {
+    background-color: #2222e6;
+    padding: 2px 5px;
+    color: white;
+    border-radius: 3px;
+}
+
+/* contiene la imágen */
+figure {
+    margin-bottom: 20px;
+    text-align: center;
+    max-height: 1000px;
+}
+/*decripcion de la imagen*/
+figcaption {
+    font-size: 0.9rem;
+    color: #666666;
+    margin-top: 5px;
+}
+/*para que la imagen se vea a mi gusto*/
+.imagen-proyecto {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+
+/* para agrupar todo el formulario */
+#contacto fieldset {
+    border: 1px solid #dddddd;
+    padding: 20px;
+    border-radius: 6px;
+}
+/*el titulo del marco*/
+#contacto legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+/*en para la inf y las entreadas de texto*/
+.campo {
+    margin-bottom: 15px;
+    text-align: left;
+}
+/*para enl texto*/
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+/*cuadros de entrada del texto*/
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-family: inherit;
+    outline: none;
+}
+/*para que el usuario se fige donde esta escribindo*/
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #2222e6;
+    box-shadow: 0 0 5px #2277e6;
+}
+/*para enviar el formulario*/
+.boton-contacto {
+    background-color: #2222e6;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+/*para cambiar el color del boton de envio*/
+.boton-contacto:hover {
+    background-color: #000;
+}
+
+/* tabla */
+#estudios table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+/*solo para th y td*/
+#estudios th,
+#estudios td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #dddddd;
+}
+/*para el color de th*/
+#estudios th {
+    background-color: #2222e6;
+    color: #ffffff;
+}
+/*para las filas pares*/
+#estudios tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #2222e6;
+    font-size: 0.9rem;
+    color: #333;
+}
+/*para el color de a*/
+footer a {
+    color: #2222e6;
+}
+
+@media (max-width: 600px) {
+
+    /* 1. Contenedor padre: cambia de fila a columna */
+    .contenedor-principal, main, .wrapper, .layout {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    /* 2. Columna principal (toma todo el ancho y se mantiene arriba) */
+    .contenido-principal, main section, .columna-principal {
+        width: 100% !important;
+        order: 1; /* Garantiza que aparezca primero */
+    }
+
+    /* 3. Columna lateral (pasa a ocupar el 100% y se ubica abajo) */
+    aside, .sidebar, .columna-lateral {
+        width: 100% !important;
+        float: none !important; /* Elimina flotados antiguos si usabas float */
+        order: 2; /* Se posiciona justo debajo del contenido principal */
+        margin-top: 20px;
+        border-color: #2222e6;
+    }
+}
