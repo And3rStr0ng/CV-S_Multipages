@@ -265,3 +265,15 @@ footer a {
         border-color: #2222e6;
     }
 }
+/*Extra small*/
+@media(max-width: 575.98px){}
+/*sm Small*/
+@media(max-width: 576px){}
+/*md Medium*/
+@media(max-width: 768px){}
+/*lg Large*/
+@media(max-width: 992px){}
+/*xl Extra Large*/
+@media(max-width: 1200px){}
+/*xxl Extra Extra Large*/
+@media(max-width: 1400px){}
